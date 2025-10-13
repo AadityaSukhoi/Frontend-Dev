@@ -43,11 +43,11 @@ The Live Server extension in VS Code is another useful tool that enables real-ti
 5. Explain what a web server is and give examples of commonly used servers.
 -> A web server is software (or hardware) that delivers web content to users over the internet when requested.
 # Common Web Servers:
-Apache HTTP Server – Old but gold.
-Nginx – Fast and lightweight.
-Microsoft IIS – For Windows environments.
-LiteSpeed – Super optimized.
-Node.js (Express) – JavaScript-based server runtime.
+Apache HTTP Server
+Nginx
+Microsoft IIS
+LiteSpeed
+Node.js (Express)
 
 
 6. Define the roles of a frontend developer, backend developer, and database administrator
