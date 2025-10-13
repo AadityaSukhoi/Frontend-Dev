@@ -1,0 +1,93 @@
+1. Explain the difference between frontend, backend, and full-stack development with
+suitable real-world examples.
+
+-> Frontend Development deals with what the user sees and interacts with. 
+Example: The UI/UX of Instagram, the buttons, the colors, animations, everything comes under Frontend.
+Backend Development handles the behind the scenes communication between the client and the server. It includes database, authentication and server logic. 
+Example: When you log in to Instagram and your data magically appears? That’s backend doing its job with Node.js, Python, Java, etc.
+Full-Stack Development deals with both - Frontend and Backend. 
+Example: A developer who designs the feed (frontend) and manages how posts are stored and retrieved (backend).
+
+
+2. Create a simple diagram showing how the client-server model works in web architecture.
+
+->  +-------------+          HTTP Request          +-----------------+
+    |             | -----------------------------> |                 |
+    |   CLIENT    |                                |    SERVER       |
+    | (Browser)   | <----------------------------- |   (Web App)     |
+    |             |          HTTP Response         |                 |
+    +-------------+                                +-----------------+
+                                                        |
+                                                        |
+                                                        v
+                                                +-----------------+
+                                                |   DATABASE      |
+                                                +-----------------+
+
+
+3. Describe how a browser requests and displays a web page from a web server.
+
+-> When a user types a website URL (for example, www.google.com) into the browser’s address bar, the browser begins a process to locate and display the requested web page. First, the browser contacts a Domain Name System (DNS) server to translate the human-readable domain name into an IP address, which identifies the location of the web server on the internet. Once the IP address is found, the browser sends an HTTP or HTTPS request to that server, asking for the web page’s content. The web server receives this request, processes it, and then sends back the necessary files—usually HTML, CSS, and JavaScript—as a response. The browser then interprets the HTML to structure the page, applies the CSS to style it, and executes any JavaScript to add interactivity or dynamic features. Finally, the rendered page is displayed on the user’s screen, allowing them to view and interact with the website.
+
+
+4. Identify and list the tools required to set up a web development environment. Explain the
+purpose of each.
+
+-> To set up a proper web development environment, several essential tools are required to ensure smooth coding, testing, and deployment. The first and most important tool is a code editor, such as Visual Studio Code (VS Code), which provides features like syntax highlighting, auto-completion, debugging, and extensions that simplify writing HTML, CSS, and JavaScript. 
+Next, Node.js is needed to run JavaScript code outside the browser and to use its package manager, npm (Node Package Manager), which helps developers install and manage useful libraries and frameworks efficiently. 
+A web browser like Google Chrome is essential for testing, debugging, and viewing the output of web pages in real time. 
+Additionally, Git and GitHub are crucial for version control and collaboration, allowing developers to track changes in their code and work together on shared projects. 
+The Live Server extension in VS Code is another useful tool that enables real-time reloading of web pages during development, making the testing process faster and more interactive. 
+
+
+5. Explain what a web server is and give examples of commonly used servers.
+-> A web server is software (or hardware) that delivers web content to users over the internet when requested.
+# Common Web Servers:
+Apache HTTP Server – Old but gold.
+Nginx – Fast and lightweight.
+Microsoft IIS – For Windows environments.
+LiteSpeed – Super optimized.
+Node.js (Express) – JavaScript-based server runtime.
+
+
+6. Define the roles of a frontend developer, backend developer, and database administrator
+in a project.
+
+-> Frontend Developer: Designs and implements user interfaces, ensures responsive design, and handles user interactions. 
+Backend Developer: Builds and maintains server-side logic, connects to databases, handles APIs, authentication, etc. 
+Database Administrator (DBA): Manages database structure, ensures data integrity, security, backups, and performance.
+
+
+7. Explain the difference between static and dynamic websites. Provide an example of
+each.
+->  A static website shows the same content to every visitor and only changes when the developer updates the files. These sites are fast, simple, and great for portfolios or company profiles. For example, a personal portfolio with your bio and contact info is a static site.
+
+A dynamic website, on the other hand, updates its content automatically based on user actions or stored data. It uses server-side languages like PHP, Python, or Node.js, and connects to databases such as MySQL. Examples include social media sites like Facebook or shopping platforms like Amazon, where content changes depending on the user. 
+
+
+8. Research and list five web browsers. Explain how rendering engines differ between
+them.
+->  |     Browser         |    Rendering Engine |
+    | ------------------- | --------------------|
+    | Google Chrome       | Blink               |
+    | Mozilla Firefox     | Gecko               |
+    | Safari (Apple)      | WebKit              |
+    | Microsoft Edge      | Blink               |
+    | Brave               | Blink               |
+
+
+9. Draw a labeled diagram showing the basic web architecture flow — client, server,
+database, and APIs.
+-> +-------------+         +------------------+         +----------------+
+    |             |  HTTP   |                  |  Query  |                |
+    |   CLIENT    | <-----> |     SERVER       | <-----> |   DATABASE     |
+    | (Browser)   | Request | (Backend Logic)  |  Result | (Data Storage) |
+    +-------------+         +------------------+         +----------------+
+            |
+            |
+            v
+    +----------------+
+    |    APIs        |
+    | (Middleware /  |
+    |  Third-party)  |
+    +----------------+
