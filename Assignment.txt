@@ -78,7 +78,7 @@ them.
 
 9. Draw a labeled diagram showing the basic web architecture flow — client, server,
 database, and APIs.
--> +-------------+         +------------------+         +----------------+
+->  +-------------+         +------------------+         +----------------+
     |             |  HTTP   |                  |  Query  |                |
     |   CLIENT    | <-----> |     SERVER       | <-----> |   DATABASE     |
     | (Browser)   | Request | (Backend Logic)  |  Result | (Data Storage) |
