@@ -1,0 +1,88 @@
+<!-- Design a News Layout Page:
+● <header> → Site name
+● <nav> → News Categories (Sports, Technology, Politics)
+● <main> → 3 <article>s each with headline, date (<time>), short content, and a
+source link.
+● <aside> → Popular Topics list
+● <footer> → Contact & rights info. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DailyPulse News</title>
+</head>
+<body>
+  <header>
+    <h1 align="center">DailyPulse News</h1>
+    <p align="center">Your trusted source for the latest stories — fast, fair, and fearless.</p>
+  </header>
+  <nav align="center">
+    <strong>Categories:</strong>
+    <a href="#sports">Sports</a> |
+    <a href="#technology">Technology</a> |
+    <a href="#politics">Politics</a>
+  </nav>
+
+  <hr>
+  <main>
+
+    <!-- Article 1 -->
+    <article id="sports">
+      <h2>India Wins ICC World Cup 2025!</h2>
+      <time datetime="2025-07-18">July 18, 2025</time>
+      <p>
+        In an unforgettable final at the Wankhede Stadium, Team India defeated Australia by 6 wickets 
+        to lift the ICC Cricket World Cup trophy for the third time in history. The crowd went wild 
+        as captain Rohit Sharma hit the winning runs.
+      </p>
+      <p><a href="https://www.espncricinfo.com" target="_blank">Read full report on ESPN Cricinfo</a></p>
+    </article>
+
+    <hr>
+
+    <!-- Article 2 -->
+    <article id="technology">
+      <h2>OpenAI Unveils GPT-5 — The Next Leap in AI</h2>
+      <time datetime="2025-09-01">September 1, 2025</time>
+      <p>
+        OpenAI announced the launch of GPT-5, its most advanced language model yet, capable of real-time 
+        reasoning, creativity, and adaptive learning. Experts are calling it a “revolution in digital intelligence.”
+      </p>
+      <p><a href="https://openai.com/blog" target="_blank">Read more on OpenAI Blog</a></p>
+    </article>
+
+    <hr>
+
+    <!-- Article 3 -->
+    <article id="politics">
+      <h2>Global Climate Summit 2025 — New Era for Green Policy</h2>
+      <time datetime="2025-10-05">October 5, 2025</time>
+      <p>
+        World leaders met in Geneva to finalize a groundbreaking agreement aimed at reducing carbon 
+        emissions by 60% by 2040. The accord is being hailed as the strongest climate commitment ever signed.
+      </p>
+      <p><a href="https://www.un.org/climate" target="_blank">Learn more on UN Climate News</a></p>
+    </article>
+
+  </main>
+
+  <hr>
+  <aside>
+    <h3>Popular Topics</h3>
+    <ul>
+      <li>Space Exploration</li>
+      <li>Electric Vehicles</li>
+      <li>Artificial Intelligence</li>
+      <li>Global Economy</li>
+      <li>Health & Wellness</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <p>Contact: <a href="mailto:info@dailypulse.com">info@dailypulse.com</a></p>
+    <p>© 2025 DailyPulse News. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

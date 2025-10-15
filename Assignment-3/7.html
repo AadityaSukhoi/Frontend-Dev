@@ -1,0 +1,110 @@
+<!-- Design a Conference Schedule page using HTML tables and semantic tags.
+The table should have:
+● Sessions (Morning, Afternoon, Evening)
+● Columns for Time, Topic, Speaker
+● Use <thead>, <tbody>, and <tfoot> for structure. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TechSphere 2025 — Conference Schedule</title>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1 align="center">TechSphere 2025</h1>
+    <p align="center">Annual Technology and Innovation Conference</p>
+    <p align="center"><strong>Date:</strong> March 22, 2025 | <strong>Venue:</strong> GLA University Auditorium</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Schedule Section -->
+    <section id="schedule">
+      <h2>Conference Schedule</h2>
+
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Session</th>
+            <th>Time</th>
+            <th>Topic</th>
+            <th>Speaker</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- Morning Session -->
+          <tr>
+            <td rowspan="3"><strong>Morning</strong></td>
+            <td>09:00 AM – 09:30 AM</td>
+            <td>Opening Ceremony & Keynote</td>
+            <td>Dr. Ashok Bhansali (GLA University)</td>
+          </tr>
+          <tr>
+            <td>09:30 AM – 10:30 AM</td>
+            <td>The Future of Artificial Intelligence</td>
+            <td>Prof. Rajesh Gupta (IIT Delhi)</td>
+          </tr>
+          <tr>
+            <td>10:45 AM – 12:00 PM</td>
+            <td>Data-Driven Innovation in Industry 4.0</td>
+            <td>Ms. Aditi Sharma (Google India)</td>
+          </tr>
+
+          <!-- Afternoon Session -->
+          <tr>
+            <td rowspan="3"><strong>Afternoon</strong></td>
+            <td>12:00 PM – 01:00 PM</td>
+            <td>Networking Lunch</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>01:00 PM – 02:15 PM</td>
+            <td>Cybersecurity in the Age of AI</td>
+            <td>Mr. Karan Verma (Microsoft)</td>
+          </tr>
+          <tr>
+            <td>02:30 PM – 03:30 PM</td>
+            <td>Panel Discussion: The Future of Tech Careers</td>
+            <td>Industry Experts Panel</td>
+          </tr>
+
+          <!-- Evening Session -->
+          <tr>
+            <td rowspan="2"><strong>Evening</strong></td>
+            <td>03:45 PM – 04:30 PM</td>
+            <td>Startup Showcase & Innovation Awards</td>
+            <td>Dr. R. K. Tiwari (Startup India)</td>
+          </tr>
+          <tr>
+            <td>04:30 PM – 05:00 PM</td>
+            <td>Closing Remarks & Vote of Thanks</td>
+            <td>Organizing Committee</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="4">
+              <strong>Note:</strong> All sessions will take place in AB 2 Auditorium.  
+              Lunch and tea will be served in the University Cafeteria.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact: <a href="mailto:conference@techsphere2025.com">conference@techsphere2025.com</a></p>
+    <p>© 2025 TechSphere Conference. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

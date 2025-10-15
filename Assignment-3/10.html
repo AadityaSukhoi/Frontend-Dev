@@ -1,0 +1,78 @@
+<!-- Create a Dropdown-based Selection Page:
+● Add multiple <select> dropdowns for:
+○ Country
+○ State
+○ City
+
+○ Favorite Tourist Place
+● Each dropdown must have a pre-selected option.
+● Add a <p> summarizing your choices. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown Selection Page</title>
+</head>
+<body>
+
+  <h1>Travel Destination Selector</h1>
+  <p>Choose your travel preferences below:</p>
+
+  <!-- Country Dropdown -->
+  <label for="country">Select Country:</label>
+  <select id="country" name="country">
+    <option selected>India</option>
+    <option>Japan</option>
+    <option>France</option>
+    <option>Italy</option>
+    <option>USA</option>
+  </select>
+  <br><br>
+
+  <!-- State Dropdown -->
+  <label for="state">Select State/Region:</label>
+  <select id="state" name="state">
+    <option selected>Uttar Pradesh</option>
+    <option>Maharashtra</option>
+    <option>Karnataka</option>
+    <option>Kyoto Prefecture</option>
+    <option>Île-de-France</option>
+    <option>Lazio</option>
+    <option>California</option>
+  </select>
+  <br><br>
+
+  <!-- City Dropdown -->
+  <label for="city">Select City:</label>
+  <select id="city" name="city">
+    <option selected>Agra</option>
+    <option>Mumbai</option>
+    <option>Bangalore</option>
+    <option>Paris</option>
+    <option>Rome</option>
+    <option>New York</option>
+  </select>
+  <br><br>
+
+  <!-- Favorite Tourist Place Dropdown -->
+  <label for="place">Favorite Tourist Place:</label>
+  <select id="place" name="place">
+    <option selected>Taj Mahal</option>
+    <option>Gateway of India</option>
+    <option>Mount Fuji</option>
+    <option>Eiffel Tower</option>
+    <option>Fushimi Inari Shrine</option>
+    <option>Colosseum</option>
+    <option>Statue of Liberty</option>
+    <option>Central Park</option>
+    <option>Golden Gate Bridge</option>
+  </select>
+
+  <hr>
+
+  <!-- Summary -->
+  <p><strong>Summary:</strong> You’ve selected <em>India</em> → <em>Uttar Pradesh</em> → <em>Agra</em> and your favorite tourist place is <em>Taj Mahal</em>.</p>
+
+</body>
+</html>

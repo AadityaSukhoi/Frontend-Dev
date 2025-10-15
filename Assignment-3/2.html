@@ -1,0 +1,85 @@
+<!-- 2. Build a Product Catalog page for an online store using only HTML:
+● Use a <table> to list products with columns → Product Name, Description, Price, and
+Availability.
+● Add one image per product using <img> inside a cell.
+● Use attributes like colspan and rowspan where necessary. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Store — Product Catalog</title>
+</head>
+<body>
+
+  <header  align="center">
+    <h1>Aaditya's Online Store</h1>
+    <p>Find the coolest tech gadgets & accessories here!</p>
+  </header>
+
+  <main>
+    <br><h2 align="center">Product Catalog</h2>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Product Image</th>
+          <th>Product Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Availability</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- Product 1 -->
+        <tr>
+          <td><img src="Headphones.webp" alt="Wireless Headphones" height="300px"></td>
+          <td>Wireless Headphones</td>
+          <td>Noise-cancelling over-ear headphones with 30 hours of battery life.</td>
+          <td>₹19,999</td>
+          <td>In Stock</td>
+        </tr>
+
+        <!-- Product 2 (example of colspan usage for long description) -->
+        <tr>
+          <td><img src="smartwatch.webp" alt="Smartwatch" height="300px"></td>
+          <td>Smartwatch</td>
+          <td colspan="2">
+            Tracks heart rate, sleep, and workouts. Includes GPS & message notifications.
+          </td>
+          <td>Limited Stock</td>
+        </tr>
+
+        <!-- Product 3 (example of rowspan for image) -->
+        <tr>
+          <td rowspan="2">
+            <img src="speaker.webp" alt="Bluetooth Speaker" height="300px">
+          </td>
+          <td rowspan="2">Bluetooth Speaker</td>
+          <td>Compact, waterproof, and delivers deep bass.</td>
+          <td>₹7,999</td>
+          <td>In Stock</td>
+        </tr>
+        <tr>
+          <td colspan="3">Available in: Black, Blue, and Red.</td>
+        </tr>
+
+        <!-- Product 4 -->
+        <tr>
+          <td><img src="most_expensive_gaming_mouse.webp" alt="Gaming Mouse" height="300px"></td>
+          <td>Gaming Mouse</td>
+          <td>RGB lighting, 7 programmable buttons, and adjustable DPI up to 16,000.</td>
+          <td>₹15,999</td>
+          <td>Out of Stock</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer align="center">
+    <p>© 2025 Aaditya's Online Store. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

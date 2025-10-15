@@ -1,0 +1,73 @@
+<!-- Create a Movie Database Page using a <table>:
+● Columns: Movie Name, Genre, Year, IMDB Rating, and Link.
+● Include attributes like border, title, and colspan.
+● Add a caption at the top and a note at the bottom using <small>. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎥 Movie Database</title>
+</head>
+<body>
+
+  <h1 title="List of popular movies with details" align="center">Movie Database</h1>
+
+  <!-- Movie Table -->
+  <table border="1" cellpadding="10" cellspacing="0" title="Movie Information Table" align="center">
+    <caption><strong>Top Rated Movies Collection</strong></caption>
+
+    <!-- Table Header -->
+    <thead>
+      <tr>
+        <th>Movie Name</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>IMDB Rating</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+
+    <!-- Table Body -->
+    <tbody>
+      <tr>
+        <td>The Shawshank Redemption</td>
+        <td>Drama</td>
+        <td>1994</td>
+        <td>9.3</td>
+        <td><a href="https://www.imdb.com/title/tt0111161/" target="_blank">IMDB</a></td>
+      </tr>
+      <tr>
+        <td>Inception</td>
+        <td>Sci-Fi / Thriller</td>
+        <td>2010</td>
+        <td>8.8</td>
+        <td><a href="https://www.imdb.com/title/tt1375666/" target="_blank">IMDB</a></td>
+      </tr>
+      <tr>
+        <td>Interstellar</td>
+        <td>Adventure / Sci-Fi</td>
+        <td>2014</td>
+        <td>8.6</td>
+        <td><a href="https://www.imdb.com/title/tt0816692/" target="_blank">IMDB</a></td>
+      </tr>
+      <tr>
+        <td>The Dark Knight</td>
+        <td>Action / Crime</td>
+        <td>2008</td>
+        <td>9.0</td>
+        <td><a href="https://www.imdb.com/title/tt0468569/" target="_blank">IMDB</a></td>
+      </tr>
+      <tr>
+        <td colspan="5" align="center"><em>More movies coming soon...</em></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Note at the bottom -->
+  <p align="center">
+    <small> Data collected from IMDb as of 2025. Ratings and information are subject to change.</small>
+  </p>
+
+</body>
+</html>

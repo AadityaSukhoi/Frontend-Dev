@@ -1,0 +1,77 @@
+<!-- Create a Student Report Page:
+● <h1> for school name.
+● <table> for marks of 5 subjects.
+● Add a row that shows Total and Percentage (no calculation needed, just text).
+● Use attributes like rowspan, colspan, and title to improve clarity. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Report Card</title>
+</head>
+<body>
+
+  <!-- School Name -->
+  <h1 title="Official Student Report" align="center"> Student Report Card</h1>
+
+  <!-- Student Details -->
+  <h2>Student: Aaditya Ranjan Moitra</h2>
+  <p><strong>Class:</strong> 10th | <strong>Roll No:</strong> 01 | <strong>Year:</strong> 2025</p>
+
+  <!-- Marks Table -->
+  <table border="1" cellpadding="10" cellspacing="0" title="Academic Performance Summary">
+    <thead>
+      <tr>
+        <th rowspan="2">Subject</th>
+        <th colspan="2">Marks</th>
+      </tr>
+      <tr>
+        <th>Theory (out of 100)</th>
+        <th>Practical (out of 50)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td title="Language Subject">English</td>
+        <td>85</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td title="Science Subject">Mathematics</td>
+        <td>90</td>
+        <td>45</td>
+      </tr>
+      <tr>
+        <td>Science</td>
+        <td>88</td>
+        <td>42</td>
+      </tr>
+      <tr>
+        <td>Social Studies</td>
+        <td>82</td>
+        <td>38</td>
+      </tr>
+      <tr>
+        <td>Computer Applications</td>
+        <td>95</td>
+        <td>48</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="3" title="Total marks obtained and percentage"> 
+          <strong>Total Marks:</strong> 603 / 750 &nbsp;&nbsp; | &nbsp;&nbsp;
+          <strong>Percentage:</strong> 80.4%
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <!-- Remarks -->
+  <p><strong>Remarks:</strong> Excellent performance! Keep up the good work 💪</p>
+
+</body>
+</html>

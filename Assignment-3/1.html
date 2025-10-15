@@ -1,0 +1,115 @@
+<!-- 1. Create a multi-section resume page using only HTML.
+Include:
+● <header> → Name & contact info
+● <nav> → Quick links (About, Skills, Projects, Education)
+● <main> →
+○ <section> About Me
+○ <section> Skills (unordered list)
+○ <section> Projects (ordered list)
+○ <section> Education (table format with course, institute, year)
+● <footer> → Copyright info. -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Aaditya Ranjan Moitra — Resume</title>
+</head>
+<body>
+
+  <!-- Header: name & contact -->
+  <header>
+    <h1>Aaditya Ranjan Moitra</h1>
+    <p>
+      <strong>Email:</strong> <a href="mailto:aadityaranjan.ai@gmail.com">aadityaranjan.ai@gmail.com</a> |
+      <strong>Phone:</strong> <a href="tel:+911234567890">+91 12345 67890</a> |
+      <strong>Location:</strong> Mathura, India |
+      <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aaditya-ranjan-moitra" target="_blank" rel="noopener">linkedin.com/in/aaditya-ranjan-moitra</a>
+    </p>
+  </header>
+
+  <!-- Nav: quick links -->
+   <section >
+  <nav aria-label="Resume quick links">
+      <a href="#about">About</a>&nbsp;&nbsp;&nbsp;
+      <a href="#skills">Skills</a>&nbsp;&nbsp;&nbsp;
+      <a href="#projects">Projects</a>&nbsp;&nbsp;&nbsp;
+      <a href="#education">Education</a>
+  </nav>
+  </section>
+
+  <!-- Main content with sections -->
+  <main>
+
+    <!-- About Me -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>
+        I'm a curious B.Tech (Hons.) CSE student specializing in AI & Analytics.
+        I enjoy turning messy data into clear insights and building reliable, maintainable code.
+        Passionate about machine learning, data visualization, and practical problem solving.
+      </p>
+    </section>
+
+    <!-- Skills (unordered list) -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul>
+        <li>Programming: Python, Java</li>
+        <li>Data & ML: Pandas, NumPy, scikit-learn, TensorFlow</li>
+        <li>Web: HTML, CSS, JavaScript (fundamentals)</li>
+        <li>Tools: Git, SQL, Linux</li>
+        <li>Soft skills: Problem-solving, teamwork, technical communication</li>
+      </ul>
+    </section>
+
+    <!-- Projects (ordered list) -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <ol>
+        <li>
+          <strong>Forza Horizon 5 Hand Controller</strong> — Built a game controller which controls the car with your hand gestures using OpenCV.
+        </li>
+        <li>
+          <strong>NeuroNote</strong> — A RAG based application to summarize patient EHR data into smart bullet points.
+        </li>
+        <li>
+          <strong>FinTrack AI</strong> — A smart AI based finance tracker which will track every expense and recommend where to cut down on your expenditures.
+        </li>
+      </ol>
+    </section>
+
+    <section id="education" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      <table border="1" cellpadding="6" cellspacing="0" summary="Course, Institute and Year of completion">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Institute</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>B.Tech (Hons.) Computer Science & Engineering — AI & Analytics</td>
+            <td>GLA University</td>
+            <td>2023 — Present</td>
+          </tr>
+          <tr>
+            <td>Class 12 (PCM + CS)</td>
+            <td>Rani Laxmibai Group of Public Schools</td>
+            <td>2022</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Footer: copyright -->
+  <footer>
+    <p>© 2025 Aaditya Ranjan Moitra. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
