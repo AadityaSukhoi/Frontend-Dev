@@ -1,0 +1,15 @@
+<!-- Create a frameset layout using <frameset> and <frame> tags:
+● Top frame → Navigation links (Home, About, Contact)
+● Bottom frame → Displays a message “Welcome to My Website”
+(Use only HTML — no CSS.) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frameset Example</title>
+</head>
+<frameset rows="100,*" border="2">
+    <frame src="navigation.html" name="topFrame" scrolling="no">
+    <frame src="welcome.html" name="bottomFrame">
+</frameset>
+</html>
