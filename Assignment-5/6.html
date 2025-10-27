@@ -1,0 +1,135 @@
+<!-- 6. Create a CSS-only photo gallery layout with at least 6 images.
+Requirements:
+● Use flexbox or grid to display images in multiple columns.
+● When hovered, each image should:
+○ Slightly scale up (transform: scale(1.1))
+○ Show a caption overlay using position: absolute and opacity.
+● Ensure that the gallery is responsive and adjusts image count per row based on screen
+width.
+● Use CSS box-shadow and border-radius to make images look clean and modern. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f5f9;
+      color: #1e293b;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: #64748b;
+    }
+
+    /* Gallery layout using CSS Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    /* Hover effect: scale + caption overlay */
+    .photo:hover img {
+      transform: scale(1.1);
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .photo:hover .caption {
+      opacity: 1;
+    }
+
+    /* Responsive behavior is handled by grid auto-fit */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wanderlust Photo Gallery</h1>
+    <p>Exploring the beauty of the world through my lens 📸</p>
+  </header>
+
+  <section class="gallery">
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach Sunset">
+      <div class="caption">Beach Sunset</div>
+    </div>
+
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Mountain Peak">
+      <div class="caption">Mountain Peak</div>
+    </div>
+
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b" alt="Forest Path">
+      <div class="caption">Forest Path</div>
+    </div>
+
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="City Lights">
+      <div class="caption">City Lights</div>
+    </div>
+
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=60" alt="Waterfall View">
+      <div class="caption">Waterfall View</div>
+    </div>
+
+    <div class="photo">
+     <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=80" alt="Burj-al-Arab">
+     <div class="caption">Burj-al-Arab</div>
+</div>
+
+  </section>
+</body>
+</html>
