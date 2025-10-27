@@ -1,0 +1,61 @@
+<!--
+Create 3 paragraphs. Use 1 class, 1 id and make the textarea and paragraphs change color on hover.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3 Paragraphs + Hover Effects</title>
+  <style>
+    .para {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height: 1.6;
+      margin: 0 0 1rem 0;
+      padding: 0.25rem 0.5rem;
+      border-left: 3px solid rgba(0,0,0,0.08);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .para:hover {
+      background-color: #e0f7fa;
+      color: #006064;
+      border-left-color: #00acc1;
+    }
+
+    #highlight {
+      background: linear-gradient(90deg, rgba(255,255,0,0.12), transparent);
+      border-left-color: #f59e0b;
+    }
+
+    #highlight:hover {
+      background-color: #fff9c4;
+      color: #f57f17;
+      border-left-color: #fbc02d;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 720px;
+      min-height: 100px;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: background-color 180ms ease, color 180ms ease, transform 120ms ease;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p class="para">Paragraph 1: Here's the first paragraph using the single class <code>.para</code>. Short, sweet, and ready to rumble.</p>
+
+    <p class="para" id="highlight">Paragraph 2: This paragraph also uses the same class, but additionally has the single <code>id="highlight"</code> to show how one element can be targeted uniquely.</p>
+
+    <p class="para">Paragraph 3: The third paragraph keeps using the same class, so styling is consistent across all three.</p>
+  </div>
+</body>
+</html>
