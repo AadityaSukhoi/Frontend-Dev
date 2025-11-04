@@ -1,0 +1,174 @@
+<!-- Build a CSS Selectors Practice Page
+Requirements:
+● Demonstrate different selector types: element, class, ID, attribute,
+and combinators (>, +, ~, descendant).
+● Use real HTML elements like paragraphs, lists, and links to show
+how selectors work.
+● Add comments in CSS to describe the purpose of each rule.
+● Include a heading and footer to structure the page semantically.
+● Maintain clean alignment using padding and margins. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CSS Selectors Practice Page</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+  }
+
+  header, footer {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+
+  p, li {
+    margin: 0.5rem 0;
+  }
+
+  p {
+    color: #334155;
+  }
+
+  .highlight {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 0.5rem;
+  }
+
+  #special {
+    background: #cffafe;
+    border: 2px solid #06b6d4;
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+
+  a[target="_blank"] {
+    color: #10b981;
+    font-weight: 600;
+  }
+
+
+  .parent > p {
+    color: #ef4444;
+  }
+
+  h3 + p {
+    color: #7c3aed;
+  }
+
+  h4 ~ p {
+    color: #f97316;
+  }
+
+  div span {
+    font-weight: 700;
+    color: #0ea5e9;
+  }
+
+
+  ul {
+    padding-left: 1.25rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+
+  code {
+    background: #e2e8f0;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Practice Page</h1>
+    <p>Learn how different selectors affect elements</p>
+  </header>
+
+  <main>
+    <!-- Element Selector Example -->
+    <section>
+      <h2>1. Element Selector (<code>p</code>)</h2>
+      <p>This paragraph uses the element selector rule applied to all &lt;p&gt; tags.</p>
+      <p>Every paragraph tag will share the same base color and margin.</p>
+    </section>
+
+    <!-- Class Selector Example -->
+    <section>
+      <h2>2. Class Selector (<code>.highlight</code>)</h2>
+      <p class="highlight">This paragraph is highlighted using a class selector.</p>
+      <p>You can reuse class selectors across multiple elements.</p>
+    </section>
+
+    <!-- ID Selector Example -->
+    <section>
+      <h2>3. ID Selector (<code>#special</code>)</h2>
+      <p id="special">This one uses an ID selector to make it stand out.</p>
+    </section>
+
+    <!-- Attribute Selector Example -->
+    <section>
+      <h2>4. Attribute Selector (<code>[target="_blank"]</code>)</h2>
+      <p>Links with target="_blank" get a special color:</p>
+      <ul>
+        <li><a href="https://www.google.com" target="_blank">Open Google (new tab)</a></li>
+        <li><a href="https://www.wikipedia.org">Open Wikipedia (same tab)</a></li>
+      </ul>
+    </section>
+
+    <!-- Combinators Example -->
+    <section>
+      <h2>5. Combinators</h2>
+      <div class="parent">
+        <p>This paragraph is a <strong>direct child</strong> of <code>.parent</code>.</p>
+        <div>
+          <p>This one is a nested descendant (not direct child).</p>
+        </div>
+      </div>
+
+      <h3>Heading 3</h3>
+      <p>This is the <strong>adjacent sibling</strong> paragraph — styled purple.</p>
+      <p>This paragraph is ignored by <code>h3 + p</code>.</p>
+
+      <h4>Heading 4</h4>
+      <p>All following paragraphs after this h4 are orange (general sibling).</p>
+      <p>Still part of the same selection.</p>
+
+      <div>
+        <p>Inside a <code>&lt;div&gt;</code>, <span>this span</span> gets blue text due to the descendant selector.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

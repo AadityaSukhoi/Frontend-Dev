@@ -1,0 +1,129 @@
+<!-- Design a User Interface Components Page
+Requirements:
+● Create a simple UI containing a search bar, buttons, and a
+dropdown menu.
+● Use consistent styling with padding, border-radius, and
+box-shadow.
+● Highlight focused or active elements using :focus and :hover.
+● Keep all components aligned in a card-like container using
+Flexbox.
+● Apply a soft background gradient for an appealing interface. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Interface Components</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #f1f5f9);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ui-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: 320px;
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    font-size: 1rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .search-bar:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  button {
+    padding: 0.65rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .btn-primary {
+    background: #2563eb;
+    color: white;
+  }
+  .btn-primary:hover {
+    background: #1d4ed8;
+  }
+  .btn-primary:focus {
+    outline: 3px solid rgba(37,99,235,0.3);
+  }
+
+  .btn-secondary {
+    background: #10b981;
+    color: white;
+  }
+  .btn-secondary:hover {
+    background: #059669;
+  }
+  .btn-secondary:focus {
+    outline: 3px solid rgba(16,185,129,0.3);
+  }
+
+  select {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+  }
+</style>
+</head>
+<body>
+  <div class="ui-card">
+    <input type="text" class="search-bar" placeholder="Search...">
+    <div class="btn-group">
+      <button class="btn-primary">Search</button>
+      <button class="btn-secondary">Reset</button>
+    </div>
+    <select>
+      <option value="">Select Category</option>
+      <option value="tech">Technology</option>
+      <option value="design">Design</option>
+      <option value="science">Science</option>
+    </select>
+  </div>
+</body>
+</html>

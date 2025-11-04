@@ -1,0 +1,155 @@
+<!-- Design a Tooltip Demonstration Page
+Requirements:
+● Create multiple elements (like icons or words) that display tooltips
+on hover.
+● Build tooltips using only CSS (position: absolute; and opacity
+transitions).
+● Each tooltip should fade in smoothly using transition: 0.3s
+ease-in-out.
+● Ensure tooltips remain readable and positioned above the hovered
+element.
+● Center all examples on the page using Flexbox alignment. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tooltip Demonstration</title>
+<style>
+  /* ===== Global setup ===== */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --bg: #f8fafc;
+    --tooltip-bg: #1e293b;
+    --tooltip-text: #f8fafc;
+    --accent: #3b82f6;
+    --duration: 0.3s;
+    --radius: 6px;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    color: #1e293b;
+  }
+
+  /* ===== Tooltip Container ===== */
+  .tooltip-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ===== Tooltip base ===== */
+  .tooltip {
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--accent);
+    display: inline-block;
+  }
+
+  .tooltip .tooltip-text {
+    position: absolute;
+    bottom: 125%; /* Above the hovered element */
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--tooltip-bg);
+    color: var(--tooltip-text);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--duration) ease-in-out, transform var(--duration) ease-in-out;
+    transform-origin: bottom center;
+    font-size: 0.85rem;
+  }
+
+  /* Tooltip arrow */
+  .tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--tooltip-bg) transparent transparent transparent;
+  }
+
+  /* ===== Hover Effect ===== */
+  .tooltip:hover .tooltip-text {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+  }
+
+  /* ===== Fancy icons ===== */
+  .icon {
+    font-size: 2rem;
+  }
+
+  /* Word examples */
+  .word {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+    border-bottom: 2px dashed var(--accent);
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    .tooltip-container {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Tooltip Demonstration</h1>
+  
+  <div class="tooltip-container">
+    <div class="tooltip">
+      <span class="icon">💡</span>
+      <span class="tooltip-text">Bright idea!</span>
+    </div>
+
+    <div class="tooltip">
+      <span class="icon">📘</span>
+      <span class="tooltip-text">This is a book icon tooltip.</span>
+    </div>
+
+    <div class="tooltip">
+      <span class="icon">⚙️</span>
+      <span class="tooltip-text">Settings are up here!</span>
+    </div>
+
+    <div class="tooltip">
+      <span class="word">Hover me</span>
+      <span class="tooltip-text">You found the hidden message </span>
+    </div>
+
+    <div class="tooltip">
+      <span class="word">CSS Rocks</span>
+      <span class="tooltip-text">No JavaScript needed!</span>
+    </div>
+  </div>
+</body>
+</html>

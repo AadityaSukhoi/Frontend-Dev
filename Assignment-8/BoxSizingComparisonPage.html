@@ -1,0 +1,104 @@
+<!-- Build a Box-Sizing Comparison Page
+Requirements:
+● Create two boxes side by side—one using the default box-sizing
+and one using box-sizing: border-box;.
+● Give both boxes equal width and padding to highlight the
+difference.
+● Use contrasting background colors to make comparison clear.
+● Include descriptive text explaining how box-sizing affects total size.
+● Center the content and ensure responsiveness for smaller
+screens. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box-Sizing Comparison</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  h1 {
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+  }
+
+  .comparison-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #1e40af;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+
+  .content {
+    background: rgba(255,255,255,0.2);
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  .default-box {
+    background: #ef4444;
+    box-sizing: content-box; 
+  }
+
+  .border-box {
+    background: #10b981;
+    box-sizing: border-box;
+  }
+
+  .description {
+    max-width: 600px;
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    .comparison-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Box-Sizing Comparison</h1>
+
+  <div class="comparison-container">
+    <div class="box default-box">
+      <div class="content">content-box<br>(Default)</div>
+    </div>
+    <div class="box border-box">
+      <div class="content">border-box</div>
+    </div>
+  </div>
+
+  <p class="description">
+    Both boxes have the same <strong>width (200px)</strong>, <strong>padding (20px)</strong>, and <strong>border (5px)</strong>.  
+    However, the <span style="color:#ef4444;">red box (content-box)</span> adds padding and border to the total width,  
+    making it appear larger. The <span style="color:#10b981;">green box (border-box)</span> includes padding and border  
+    within its total width, keeping it consistent in size.
+  </p>
+</body>
+</html>
