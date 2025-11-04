@@ -1,0 +1,141 @@
+<!-- Task 5: Responsive Product Card Layout
+  Build a 4-card product section using Grid or Flexbox.
+Add title, image, description, and “Add to Cart” button.
+Apply hover effects.
+Add media queries:
+4 columns → Desktop
+2 columns → Tablet (max-width: 1024px)
+1 column → Mobile (max-width: 600px) -->
+
+<!-- Task 5: Responsive Product Card Layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Product Cards</title>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      margin-bottom: 2rem;
+      color: #222;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      font-size: clamp(1rem, 2vw, 1.4rem);
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .card-content p {
+      font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    @media (max-width: 1024px) {
+      .container { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      .container { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Our Featured Products</h1>
+  
+  <div class="container">
+    <div class="card">
+      <img src="https://picsum.photos/id/21/600/400" alt="Product 1">
+      <div class="card-content">
+        <h3>Product 1</h3>
+        <p>Perfect for daily use with premium comfort.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/id/180/600/400" alt="Product 2">
+      <div class="card-content">
+        <h3>Product 2</h3>
+        <p>High-quality material built for performance.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/id/250/600/400" alt="Product 3">
+      <div class="card-content">
+        <h3>Product 3</h3>
+        <p>Modern, sleek, and designed to impress.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/id/1060/600/400" alt="Product 4">
+      <div class="card-content">
+        <h3>Product 4</h3>
+        <p>Affordable quality for your everyday needs.</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
