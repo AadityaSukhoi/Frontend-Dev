@@ -1,0 +1,107 @@
+<!-- Task 1: Fluid Grid Layout
+Create a webpage using a fluid grid with 3 equal boxes in a row.
+Use flexbox or CSS grid.
+Each box should resize automatically with screen width.
+Add padding, background color, and centered text. -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fluid 3-Box Grid</title>
+  <style>
+    :root{
+      --gap: 1rem;
+      --pad: 1.25rem;
+      --bg: hsl(220 8% 98%);
+      --card-bg-1: hsl(210 90% 60% / 0.95);
+      --card-bg-2: hsl(180 70% 45% / 0.95);
+      --card-bg-3: hsl(260 60% 55% / 0.95);
+      --text: #0b1020;
+      --radius: 12px;
+      --min-card-width: 220px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:2rem;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .grid {
+      width:100%;
+      max-width:1100px;
+      display: grid;
+      gap: var(--gap);
+      grid-template-columns: repeat(auto-fit, minmax(var(--min-card-width), 1fr));
+      align-items:stretch;
+    }
+
+    .card {
+      padding: var(--pad);
+      border-radius: var(--radius);
+      min-height: 140px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color: white;
+      box-shadow: 0 6px 18px rgba(10,15,30,0.08);
+      transition: transform .18s ease, box-shadow .18s ease;
+      user-select: none;
+    }
+
+    .card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(10,15,30,0.14);
+    }
+
+    .card:nth-child(1){ background: linear-gradient(135deg, var(--card-bg-1), color-mix(in srgb, var(--card-bg-1) 80%, black 15%)); }
+    .card:nth-child(2){ background: linear-gradient(135deg, var(--card-bg-2), color-mix(in srgb, var(--card-bg-2) 80%, black 12%)); }
+    .card:nth-child(3){ background: linear-gradient(135deg, var(--card-bg-3), color-mix(in srgb, var(--card-bg-3) 80%, black 10%)); }
+
+    .card h3{ margin:0 0 .25rem 0; font-size:1.15rem; letter-spacing: -0.01em; }
+    .card p{ margin:0; opacity:0.95; font-size:0.95rem; }
+
+    @media (max-width:420px){
+      :root{ --pad: .9rem; --min-card-width: 160px; }
+      .card{ min-height:110px; }
+    }
+
+  </style>
+</head>
+<body>
+  <main class="grid" aria-label="Three equal responsive boxes">
+    <section class="card" role="region" aria-labelledby="box1">
+      <div>
+        <h3 id="box1">Box One</h3>
+        <p>Fluid, equal, and chill.</p>
+      </div>
+    </section>
+
+    <section class="card" role="region" aria-labelledby="box2">
+      <div>
+        <h3 id="box2">Box Two</h3>
+        <p>Resizes automatically with screen width.</p>
+      </div>
+    </section>
+
+    <section class="card" role="region" aria-labelledby="box3">
+      <div>
+        <h3 id="box3">Box Three</h3>
+        <p>Centered text, padding, and a soft shadow.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- Task 3: Media Query Example
+  Change the background color of the page based on device width.
+Desktop: lightyellow
+Tablet: lightgreen
+Mobile: lightblue
+Use:
+@media (max-width: 768px) { ... }
+@media (max-width: 480px) { ... } -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media Query Example</title>
+  <style>
+    body {
+      background-color: lightyellow;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-color: lightgreen;
+        transition: background-color 0.3s ease;
+
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        background-color: lightblue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Media Query Demo</h1>
+  <p>Resize your browser to see the background color change!</p>
+</body>
+</html>

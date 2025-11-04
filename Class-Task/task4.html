@@ -1,0 +1,45 @@
+<!-- Task 4: Responsive Typography
+  Create a simple heading and paragraph with responsive font sizes.
+Use either:
+Relative units (em, rem, %),
+or the clamp() function → font-size: clamp(1rem, 2vw, 2rem); -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Typography</title>
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Responsive Typography Rocks</h1>
+  <p>
+    Resize your browser window and watch the text adapt perfectly to any screen size. 
+  </p>
+</body>
+</html>
