@@ -1,0 +1,189 @@
+<!-- Task 7 UI Components Page
+Include search bar, buttons, dropdown menu.
+Consistent styling (padding, border-radius, box-shadow).
+Use :focus and :hover for interactivity.
+Card-like Flexbox container with a gradient background. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 7 - UI Components Page</title>
+<style>
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  }
+
+
+  .ui-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    width: 350px;
+    max-width: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ui-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 14px;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 15px;
+    background: transparent;
+  }
+
+  .search-bar:focus-within {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+  }
+
+  .search-bar i {
+    color: #888;
+  }
+
+
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .btn {
+    flex: 1;
+    padding: 10px 0;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    font-weight: 600;
+  }
+
+  .btn-primary {
+    background: linear-gradient(180deg, #007bff, #0056d2);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(180deg, #0056d2, #003c9e);
+    box-shadow: 0 6px 16px rgba(0, 91, 255, 0.25);
+  }
+
+  .btn-secondary {
+    background: #f3f4f6;
+    color: #333;
+  }
+
+  .btn-secondary:hover {
+    background: #e6e8eb;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0,123,255,0.3);
+  }
+
+
+  .dropdown {
+    position: relative;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 15px;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+  }
+
+  select:hover {
+    border-color: #007bff;
+  }
+
+  select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+    outline: none;
+  }
+
+
+  @media (max-width: 400px) {
+    .btn-group {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="ui-card">
+    <h2>UI Components</h2>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search something..." />
+      <i>🔍</i>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-secondary">Secondary</button>
+    </div>
+
+    <div class="dropdown">
+      <select>
+        <option selected disabled>Choose an option</option>
+        <option>Profile</option>
+        <option>Settings</option>
+        <option>Logout</option>
+      </select>
+    </div>
+  </div>
+
+</body>
+</html>

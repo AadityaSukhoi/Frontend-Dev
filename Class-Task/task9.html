@@ -1,0 +1,256 @@
+<!-- Task 9 Combined Effects Demo
+Mix pseudo-classes + transitions + transformations.
+Example: buttons grow + color-change on hover.
+Add subtle shadow + Flexbox alignment. -->
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Combined Effects Demo</title>
+<style>
+  /* ========== variables ========== */
+  :root{
+    --bg: #0f1724;
+    --panel: linear-gradient(180deg, #0b1220 0%, #0f1724 100%);
+    --muted: #9aa7b8;
+    --accent: #6ee7b7;   /* mint */
+    --accent-2: #60a5fa; /* blue */
+    --glass: rgba(255,255,255,0.03);
+    --radius: 12px;
+    --duration: 280ms;
+    --ease: cubic-bezier(.2,.9,.3,1);
+    --shadow-subtle: 0 6px 18px rgba(2,6,23,0.55);
+    --shadow-hover: 0 18px 40px rgba(2,6,23,0.6);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  /* page base */
+  html,body{
+    height:100%;
+    margin:0;
+    background:var(--bg);
+    color: #e6eef6;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  /* center container */
+  .wrap{
+    min-height:100vh;
+    display:flex;
+    align-items:center;            /* vertical centering */
+    justify-content:center;        /* horizontal centering */
+    padding:48px;
+    box-sizing:border-box;
+  }
+
+  .panel{
+    width:min(920px,94vw);
+    background:var(--panel);
+    border-radius:18px;
+    padding:32px;
+    box-shadow: var(--shadow-subtle);
+    display:flex;
+    gap:24px;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
+
+  .info{
+    flex:1 1 320px;
+    min-width:260px;
+  }
+
+  h1{
+    margin:0 0 8px 0;
+    font-size:1.15rem;
+    letter-spacing:0.2px;
+    font-weight:700;
+  }
+  p.lead{
+    margin:0 0 18px 0;
+    color:var(--muted);
+    line-height:1.5;
+  }
+
+  /* button group on the right */
+  .demo{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    align-items:center;
+    min-width:260px;
+  }
+
+  /* shared button base */
+  .btn{
+    --btn-bg: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    --btn-color: #dff7f0;
+    --btn-shadow: var(--shadow-subtle);
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    justify-content:center;
+    padding:12px 18px;
+    min-width:190px;
+    border-radius:12px;
+    background:var(--btn-bg);
+    color:var(--btn-color);
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: var(--btn-shadow);
+    cursor:pointer;
+    font-weight:600;
+    letter-spacing:0.2px;
+    transform-origin:center;
+    transition:
+      transform var(--duration) var(--ease),
+      box-shadow var(--duration) var(--ease),
+      background-color var(--duration) var(--ease),
+      filter var(--duration) var(--ease),
+      color var(--duration) var(--ease);
+    user-select:none;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration:none;
+  }
+
+  /* tiny icon area */
+  .btn .icon{
+    width:28px;
+    height:28px;
+    border-radius:8px;
+    display:inline-grid;
+    place-items:center;
+    font-size:14px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.03);
+  }
+
+  /* ===== specific button styles ===== */
+  .btn.mint{
+    --accentColor: var(--accent);
+    background: linear-gradient(180deg, rgba(102,255,215,0.06), rgba(30,58,50,0.02));
+    color:#eafff5;
+    border: 1px solid rgba(110,231,183,0.12);
+  }
+
+  .btn.blue{
+    --accentColor: var(--accent-2);
+    background: linear-gradient(180deg, rgba(96,165,250,0.06), rgba(11,33,60,0.02));
+    color:#eaf4ff;
+    border: 1px solid rgba(96,165,250,0.10);
+  }
+
+  .btn.ghost{
+    background: transparent;
+    color:var(--muted);
+    border: 1px dashed rgba(255,255,255,0.04);
+    min-width:160px;
+    font-weight:500;
+  }
+
+  /* HOVER — grow, lift, color change, soft glow */
+  .btn:hover,
+  .btn:focus-visible{
+    transform: translateY(-8px) scale(1.04) rotateZ(-0.25deg);
+    box-shadow: var(--shadow-hover);
+    filter: saturate(1.08) drop-shadow(0 6px 18px rgba(0,0,0,0.25));
+  }
+
+  /* color accent on hover using pseudo-element (keeps markup clean) */
+  .btn.mint:hover{
+    background: linear-gradient(180deg, rgba(110,231,183,0.14), rgba(30,58,50,0.04));
+    color: #053527;
+  }
+
+  .btn.blue:hover{
+    background: linear-gradient(180deg, rgba(96,165,250,0.14), rgba(11,33,60,0.04));
+    color: #05233b;
+  }
+
+  /* ghost becomes highlighted on hover */
+  .btn.ghost:hover{
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    color: #dce8f8;
+    transform: translateY(-4px) scale(1.02);
+  }
+
+  /* ACTIVE — pressed effect */
+  .btn:active{
+    transform: translateY(-2px) scale(0.98);
+    transition: transform 120ms ease-out;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.35);
+    filter: none;
+  }
+
+  /* subtle focus ring for keyboard users */
+  .btn:focus-visible{
+    outline: 3px solid rgba(96,165,250,0.18);
+    outline-offset:4px;
+  }
+
+  /* small helper: label below */
+  .hint{
+    margin-top:8px;
+    font-size:0.85rem;
+    color:var(--muted);
+    text-align:center;
+  }
+
+  /* responsive behavior */
+  @media (max-width:720px){
+    .panel{ padding:20px; gap:12px; }
+    .demo{ width:100%; flex-direction:row; flex-wrap:wrap; justify-content:center; gap:12px; }
+    .btn{ min-width:140px; padding:10px 14px; }
+  }
+
+  /* accessibility: respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce){
+    .btn,
+    .btn:hover,
+    .btn:active,
+    .btn:focus-visible{
+      transition: none !important;
+      transform: none !important;
+      box-shadow: var(--shadow-subtle) !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel" role="region" aria-label="Combined effects demo">
+      <div class="info">
+        <h1>Combined Effects Demo</h1>
+        <p class="lead">Hover, focus or press the buttons on the right to see combined pseudo-classes, transforms, transitions and subtle shadow changes. Works with keyboard (Tab + Enter/Space) and respects <code>prefers-reduced-motion</code>.</p>
+        <ul style="color:var(--muted); margin:0; padding-left:18px; line-height:1.6;">
+          <li>Hover: grow + lift + color-shift</li>
+          <li>Focus-visible: accessible outline + same visual affordance</li>
+          <li>Active (press): compressed, tactile response</li>
+        </ul>
+      </div>
+
+      <div class="demo" aria-hidden="false">
+        <button class="btn mint" type="button" aria-pressed="false">
+          <span class="icon">★</span>
+          <span>Primary</span>
+        </button>
+
+        <button class="btn blue" type="button" aria-pressed="false">
+          <span class="icon">⬆</span>
+          <span>Action</span>
+        </button>
+
+        <button class="btn ghost" type="button" aria-pressed="false">
+          <span class="icon">⚑</span>
+          <span>Ghost</span>
+        </button>
+
+        <div class="hint" role="note">Try keyboard: Tab → Focus → Space/Enter to press</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

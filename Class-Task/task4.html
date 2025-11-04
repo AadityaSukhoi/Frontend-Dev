@@ -1,0 +1,143 @@
+<!-- Task 4 CSS Selectors Practice Page
+Demonstrate selectors: element, class, ID, attribute, combinators (>, +, ~, descendant).
+Use real tags (p, ul, a, etc.) + CSS comments to explain.
+Structured with heading and footer. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 4 — CSS Selectors Practice</title>
+
+  <style>
+    /* --- 1️⃣ Element Selector --- */
+    /* Targets all <p> elements on the page */
+    p {
+      color: #333;
+      font-size: 1rem;
+    }
+
+    /* --- 2️⃣ Class Selector (.classname) --- */
+    /* Targets elements with class="highlight" */
+    .highlight {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 6px 10px;
+    }
+
+    /* --- 3️⃣ ID Selector (#idname) --- */
+    /* IDs are unique to one element */
+    #main-heading {
+      color: #2c3e50;
+      text-align: center;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    /* --- 4️⃣ Attribute Selector --- */
+    /* Selects any <a> tag that has a target="_blank" attribute */
+    a[target="_blank"] {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    /* When hovering over those links */
+    a[target="_blank"]:hover {
+      text-decoration: underline;
+      color: #0056b3;
+    }
+
+    /* --- 5️⃣ Descendant Combinator (space) --- */
+    /* Selects <em> inside <article> */
+    article em {
+      color: #c0392b;
+      font-weight: bold;
+    }
+
+    /* --- 6️⃣ Child Combinator (>) --- */
+    /* Selects only direct <li> children of <ul class="menu"> */
+    ul.menu > li {
+      list-style-type: square;
+      color: #16a085;
+    }
+
+    /* --- 7️⃣ Adjacent Sibling Combinator (+) --- */
+    /* Selects the paragraph immediately after any <h2> */
+    h2 + p {
+      font-style: italic;
+      color: #555;
+    }
+
+    /* --- 8️⃣ General Sibling Combinator (~) --- */
+    /* Selects all paragraphs after any <h3> on the same level */
+    h3 ~ p {
+      color: #7f8c8d;
+    }
+
+    /* --- Footer styling for structure --- */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f9fafc;
+      margin: 0;
+      padding: 20px 50px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  <header>
+    <h1 id="main-heading">CSS Selectors Practice Page</h1>
+  </header>
+
+  <!-- ======= Main Section ======= -->
+  <main>
+    <h2>1. Element Selector</h2>
+    <p>This paragraph is styled using a <strong>p element selector</strong>.</p>
+
+    <h2>2. Class Selector</h2>
+    <p class="highlight">This paragraph uses a <strong>class selector</strong> (.highlight) to stand out.</p>
+
+    <h2>3. ID Selector</h2>
+    <p>The heading at the top uses an <strong>ID selector</strong> (#main-heading).</p>
+
+    <h2>4. Attribute Selector</h2>
+    <p>Check out 
+      <a href="https://www.google.com" target="_blank">Google</a> 
+      and 
+      <a href="https://www.wikipedia.org" target="_blank">Wikipedia</a> 
+      — both links open in a new tab.
+    </p>
+
+    <h2>5. Combinators</h2>
+
+    <article>
+      <p>Here we demonstrate <strong>descendant</strong> and <strong>child</strong> combinators.</p>
+      <p>In this <em>article</em>, the word in italics is styled using the <strong>descendant selector</strong>.</p>
+    </article>
+
+    <ul class="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+
+    <h3>Combinator Examples</h3>
+    <p>This paragraph appears right after an h3 — selected with <code>h3 + p</code>.</p>
+    <p>This paragraph comes later — selected with <code>h3 ~ p</code>.</p>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <p>Created by Aaditya Ranjan Moitra</p>
+  </footer>
+</body>
+</html>

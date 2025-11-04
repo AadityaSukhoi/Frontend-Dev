@@ -1,0 +1,96 @@
+<!-- Task 6 CSS Animation Demo
+Build 3 animated items (e.g., moving box, bouncing ball).
+Use @keyframes, animation-delay, animation-iteration-count, animation-direction.
+Centered + smooth ease-in-out timing. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 6 - CSS Animation Demo</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    background: linear-gradient(180deg, #f9fbff 0%, #eef3ff 100%);
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1 {
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .animation-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* === COMMON STYLE FOR ALL ITEMS === */
+  .item {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+  }
+
+  /* === ANIMATION 1: Moving Box === */
+  .moving-box {
+    background: #007bff;
+    animation: moveBox 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes moveBox {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(100px) rotate(10deg); }
+    100% { transform: translateX(-100px) rotate(-10deg); }
+  }
+
+  /* === ANIMATION 2: Bouncing Ball === */
+  .bouncing-ball {
+    background: radial-gradient(circle at 30% 30%, #ff5722, #c21807);
+    border-radius: 50%;
+    animation: bounce 2s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-80px); }
+  }
+
+  /* === ANIMATION 3: Pulsing Circle === */
+  .pulsing {
+    background: #28a745;
+    border-radius: 50%;
+    animation: pulse 2.5s ease-in-out infinite alternate;
+    animation-delay: 1s;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0.4; }
+  }
+</style>
+</head>
+<body>
+
+  <h1>✨ CSS Animation Demo ✨</h1>
+  <div class="animation-container">
+    <div class="item moving-box"></div>
+    <div class="item bouncing-ball"></div>
+    <div class="item pulsing"></div>
+  </div>
+
+</body>
+</html>
