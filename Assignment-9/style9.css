@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title {
+  font-size: 2rem;
+  color: #00796b;
+  margin-bottom: 40px;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.principle-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: all 0.4s ease;
+  text-align: left;
+}
+
+.principle-box h2 {
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.principle-box p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.principle-box code {
+  background: #e0f7fa;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+pre {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.principle-box:hover {
+  background: linear-gradient(135deg, #00796b, #00bcd4);
+  color: white;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.principle-box:hover code,
+.principle-box:hover pre {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.principle-box:hover h2 {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principle-box {
+    text-align: center;
+  }
+}

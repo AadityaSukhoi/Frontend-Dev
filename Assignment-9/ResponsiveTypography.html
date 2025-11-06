@@ -1,0 +1,33 @@
+<!-- Q4. Responsive Typography
+Goal:
+Demonstrate how font sizes can scale automatically using relative units
+and the clamp() function.
+Requirements:
+● Create a section with a large heading and a paragraph.
+
+Use:
+h1 { font-size: clamp(1.5rem, 4vw, 3rem); }
+p { font-size: clamp(1rem, 2vw, 1.5rem); }
+●
+● Align text centrally and add balanced margins and padding.
+● Below 700 px, adjust line-height and spacing for better readability. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Typography Example</title>
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+  <section class="text-section">
+    <h1>Design That Adapts Gracefully</h1>
+    <p>
+      Responsive typography ensures that your content remains readable on every device, 
+      from massive desktop screens to tiny mobile displays. With <code>clamp()</code>, your text grows 
+      or shrinks smoothly, maintaining optimal legibility and aesthetic balance. 
+    </p>
+  </section>
+</body>
+</html>

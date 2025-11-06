@@ -1,0 +1,35 @@
+<!-- Q8. Filter Comparison Layout
+Goal:
+Create a before-and-after image comparison using filters and responsive
+design.
+Requirements:
+● Two images displayed side-by-side on desktop.
+● The right image has a CSS filter applied (e.g., brightness or contrast).
+
+● On hover, the filter fades away smoothly.
+● Below 700 px, stack both images vertically with captions. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Comparison Layout</title>
+  <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+  <h1 class="title">Before & After Filter Comparison</h1>
+
+  <section class="comparison">
+    <figure class="image-box">
+      <img src="https://picsum.photos/id/1015/500/300" alt="Original Image">
+      <figcaption>Original</figcaption>
+    </figure>
+
+    <figure class="image-box filtered">
+      <img src="https://picsum.photos/id/1015/500/300" alt="Filtered Image">
+      <figcaption>Filtered (Brightness + Contrast)</figcaption>
+    </figure>
+  </section>
+</body>
+</html>

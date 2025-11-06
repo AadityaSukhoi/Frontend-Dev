@@ -1,0 +1,55 @@
+<!-- Q9. Responsive Design Principles Summary
+Goal:
+Present core principles of responsive design visually.
+Requirements:
+● Use Grid layout to create three boxes labeled Fluid Layouts, Flexible
+Media, and Breakpoints.
+● Each box contains a short definition and a CSS code example.
+● On hover, apply a background gradient and text color change.
+● Below 600 px, convert to a single-column layout. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Design Principles Summary</title>
+  <link rel="stylesheet" href="style9.css" />
+</head>
+<body>
+  <h1 class="title">Responsive Design Principles</h1>
+
+  <section class="principles-grid">
+    <div class="principle-box">
+      <h2>Fluid Layouts</h2>
+      <p>
+        Use relative units like percentages or <code>vw</code> to ensure elements resize fluidly.
+      </p>
+      <pre><code>container {
+  width: 80%;
+}</code></pre>
+    </div>
+
+    <div class="principle-box">
+      <h2>Flexible Media</h2>
+      <p>
+        Make images and videos scale to their containers using <code>max-width: 100%;</code>.
+      </p>
+      <pre><code>img {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+    </div>
+
+    <div class="principle-box">
+      <h2>Breakpoints</h2>
+      <p>
+        Define breakpoints with media queries to adapt layouts for different screens.
+      </p>
+      <pre><code>@media (max-width: 600px) {
+  body { font-size: 0.9rem; }
+}</code></pre>
+    </div>
+  </section>
+</body>
+</html>

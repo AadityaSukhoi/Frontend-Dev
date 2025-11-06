@@ -1,0 +1,54 @@
+<!-- Q1. Responsive Image Filter Gallery
+Goal:
+Create a responsive image gallery using CSS Grid that demonstrates
+different filters.
+Requirements:
+● Display six images in a grid layout.
+● Use grid-template-columns: repeat(auto-fit,
+minmax(200px, 1fr));.
+● Apply a different CSS filter on each image (blur, grayscale, sepia,
+brightness, contrast, hue-rotate).
+● On hover, the filter effect should be removed with a smooth transition.
+● Add image captions below each image.
+● Stack all images in one column when the screen width is below 600
+px. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Filter Gallery</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1 class="title">🎨 Responsive Image Filter Gallery</h1>
+    
+    <div class="gallery">
+        <figure class="item">
+            <img src="https://picsum.photos/id/1015/400/300" alt="Mountain" class="blur">
+            <figcaption>Blur Filter</figcaption>
+        </figure>
+        <figure class="item">
+            <img src="https://picsum.photos/id/1025/400/300" alt="Dog" class="grayscale">
+            <figcaption>Grayscale Filter</figcaption>
+        </figure>
+        <figure class="item">
+            <img src="https://picsum.photos/id/1035/400/300" alt="Bridge" class="sepia">
+            <figcaption>Sepia Filter</figcaption>
+        </figure>
+        <figure class="item">
+            <img src="https://picsum.photos/id/1045/400/300" alt="Forest" class="brightness">
+            <figcaption>Brightness Filter</figcaption>
+        </figure>
+        <figure class="item">
+            <img src="https://picsum.photos/id/1055/400/300" alt="Ocean" class="contrast">
+            <figcaption>Contrast Filter</figcaption>
+        </figure>
+        <figure class="item">
+            <img src="https://picsum.photos/id/1065/400/300" alt="City" class="hue-rotate">
+            <figcaption>Hue-Rotate Filter</figcaption>
+        </figure>
+    </div>
+</body>
+</html>

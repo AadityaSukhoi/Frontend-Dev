@@ -1,0 +1,46 @@
+<!-- Q5. Filter Cards with Animation
+Goal:
+Combine CSS filters, hover effects, and keyframe animations in a
+responsive layout.
+
+Requirements:
+● Create three profile cards using Flexbox.
+● Each card contains an image and text; apply a filter like grayscale or
+sepia to the image.
+● On hover, remove the filter and lift the card using transform:
+translateY(-10px);.
+● Use @keyframes for a fade-in animation when the page loads.
+● Stack cards vertically on screens smaller than 800 px. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filter Cards with Animation</title>
+  <link rel="stylesheet" href="style5.css" />
+</head>
+<body>
+  <h1 class="title">Animated Filter Cards</h1>
+
+  <div class="card-container">
+    <div class="card">
+      <img src="https://picsum.photos/id/1005/300/200" alt="Profile 1" />
+      <h2>Alex Carter</h2>
+      <p>Frontend Developer passionate about smooth UI and modern aesthetics.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/id/1011/300/200" alt="Profile 2" />
+      <h2>Riya Sharma</h2>
+      <p>Creative designer who loves blending colors, shapes, and motion effects.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://picsum.photos/id/1027/300/200" alt="Profile 3" />
+      <h2>Jacqueline Fernandez</h2>
+      <p>Full-stack developer with a soft spot for clean code and bold visuals.</p>
+    </div>
+  </div>
+</body>
+</html>

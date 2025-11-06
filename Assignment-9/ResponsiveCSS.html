@@ -1,0 +1,54 @@
+<!-- Q6. Responsive CSS Cheat Sheet
+Goal:
+Design a responsive cheat sheet page that summarizes key Responsive
+CSS concepts.
+Requirements:
+● Display topics like Filters, Media Queries, Responsive Design, and
+Typography in separate boxes using CSS Grid.
+● Each box shows a term and its description or example.
+● On large screens: grid layout with 2–3 columns.
+● On small screens (below 700 px): convert to stacked rows where
+each heading acts as a key followed by its value (text).
+
+● Add hover and transition effects for interactivity. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive CSS Cheat Sheet</title>
+  <link rel="stylesheet" href="style6.css" />
+</head>
+<body>
+  <h1 class="title">Responsive CSS Cheat Sheet</h1>
+
+  <section class="cheat-sheet">
+    <div class="topic">
+      <h2>Filters</h2>
+      <p>Use CSS filters like <code>blur()</code>, <code>grayscale()</code>, and <code>sepia()</code> to style images. Example:  
+        <br><code>filter: grayscale(100%);</code>
+      </p>
+    </div>
+
+    <div class="topic">
+      <h2>Media Queries</h2>
+      <p>Apply styles based on screen width or device type.  
+        <br><code>@media (max-width: 600px) { ... }</code>
+      </p>
+    </div>
+
+    <div class="topic">
+      <h2>Responsive Design</h2>
+      <p>Use flexible layouts (Grid/Flexbox) and relative units (<code>%, vw, rem</code>) to make your page adapt to different screens.</p>
+    </div>
+
+    <div class="topic">
+      <h2>Typography</h2>
+      <p>Scale fonts smoothly using <code>clamp()</code>:  
+        <br><code>font-size: clamp(1rem, 2vw, 2rem);</code>
+      </p>
+    </div>
+  </section>
+</body>
+</html>
