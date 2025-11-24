@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Q5 - Image Gallery with Modal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-width: 600px;
+    }
+
+    .gallery img {
+      width: 100%;
+      cursor: pointer;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    #modalOverlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    #modalOverlay.active {
+      display: flex;
+    }
+
+    #modalContent {
+      background-color: #ffffff;
+      padding: 10px;
+      border-radius: 6px;
+      max-width: 80%;
+      max-height: 80%;
+    }
+
+    #modalContent img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <div class="gallery">
+    <img src="https://via.placeholder.com/200?text=Image+1" alt="Image 1" class="gallery-image" />
+    <img src="https://via.placeholder.com/200?text=Image+2" alt="Image 2" class="gallery-image" />
+    <img src="https://via.placeholder.com/200?text=Image+3" alt="Image 3" class="gallery-image" />
+    <img src="https://via.placeholder.com/200?text=Image+4" alt="Image 4" class="gallery-image" />
+    <img src="https://via.placeholder.com/200?text=Image+5" alt="Image 5" class="gallery-image" />
+    <img src="https://via.placeholder.com/200?text=Image+6" alt="Image 6" class="gallery-image" />
+  </div>
+
+  <div id="modalOverlay">
+    <div id="modalContent">
+      <img id="modalImage" alt="Large preview" />
+    </div>
+  </div>
+
+  <script src="image_gallery.js"></script>
+</body>
+</html>
