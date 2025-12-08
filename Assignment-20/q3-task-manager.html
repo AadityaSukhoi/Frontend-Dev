@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager Q3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        #filter {
+            padding: 6px 10px;
+            margin-bottom: 15px;
+        }
+        #taskList {
+            list-style: none;
+            padding: 0;
+        }
+        #taskList li {
+            padding: 8px 10px;
+            margin-bottom: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Task Manager</h2>
+
+    <select id="filter">
+        <option value="">All</option>
+        <option value="Low">Low Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="High">High Priority</option>
+        <option value="Completed">Completed</option>
+    </select>
+
+    <ul id="taskList"></ul>
+
+    <script src="q3-task-manager.js"></script>
+</body>
+</html>

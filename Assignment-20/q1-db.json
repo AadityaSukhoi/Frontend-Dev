@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Mouse",
+      "price": 799,
+      "image": "https://picsum.photos/200?random=1"
+    },
+    {
+      "id": 2,
+      "name": "Gaming Keyboard",
+      "price": 1499,
+      "image": "https://picsum.photos/200?random=2"
+    },
+    {
+      "id": 3,
+      "name": "USB Headset",
+      "price": 999,
+      "image": "https://picsum.photos/200?random=3"
+    },
+    {
+      "id": 4,
+      "name": "Web Camera",
+      "price": 1299,
+      "image": "https://picsum.photos/200?random=4"
+    },
+    {
+      "id": 5,
+      "name": "Portable SSD",
+      "price": 3499,
+      "image": "https://picsum.photos/200?random=5"
+    }
+  ]
+}

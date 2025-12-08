@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q4 Multi API Dashboard</title>
+    <style>
+        body { font-family: Arial; padding: 20px }
+        h2 { margin-bottom: 20px }
+        .box {
+            width: 200px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+        .container { display: flex }
+        .skeleton {
+            height: 24px;
+            background: #ddd;
+            border-radius: 6px;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: .6 }
+            50% { opacity: 1 }
+            100% { opacity: .6 }
+        }
+        #warning { margin-top: 20px; color: red; font-weight: bold }
+    </style>
+</head>
+<body>
+
+    <h2>Dashboard</h2>
+
+    <div class="container">
+        <div class="box" id="usersBox"><div class="skeleton"></div></div>
+        <div class="box" id="ordersBox"><div class="skeleton"></div></div>
+        <div class="box" id="productsBox"><div class="skeleton"></div></div>
+    </div>
+
+    <div id="warning"></div>
+
+    <script src="q4-dashboard.js"></script>
+</body>
+</html>

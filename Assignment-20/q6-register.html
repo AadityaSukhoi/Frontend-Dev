@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q6 Registration</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        body { font-family: Arial; padding: 20px }
+        form { width: 250px }
+        input { width: 100%; padding: 8px; margin-bottom: 12px }
+        button { padding: 8px 12px; cursor: pointer }
+        .msg { margin-top: 15px; font-weight: bold }
+        .error { color: red }
+        .success { color: green }
+    </style>
+</head>
+<body>
+
+    <h2>User Registration</h2>
+
+    <form id="regForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="submit">Register</button>
+    </form>
+
+    <div id="message" class="msg"></div>
+
+    <script src="q6-register.js"></script>
+</body>
+</html>
