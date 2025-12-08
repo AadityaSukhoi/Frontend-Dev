@@ -1,0 +1,46 @@
+{
+  "students": [
+    {
+      "name": "Aaditya",
+      "section": "A",
+      "marks": 85,
+      "grade": "A",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Riya",
+      "section": "B",
+      "marks": 78,
+      "grade": "B"
+    },
+    {
+      "id": "3",
+      "name": "Manoj",
+      "section": "D",
+      "marks": 79,
+      "grade": "B"
+    },
+    {
+      "id": "4",
+      "name": "Maya",
+      "section": "C",
+      "marks": 66,
+      "grade": "C"
+    },
+    {
+      "id": "5",
+      "name": "Vir",
+      "section": "B",
+      "marks": 74,
+      "grade": "B"
+    },
+    {
+      "id": "cb2b",
+      "name": "Kanishq",
+      "section": "A",
+      "marks": 90,
+      "grade": "A"
+    }
+  ]
+}
