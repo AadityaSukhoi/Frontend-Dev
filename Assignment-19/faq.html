@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>FAQ Section</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    header { margin-bottom: 20px; }
+    .faq-item { margin-bottom: 18px; }
+    .question { font-weight: bold; cursor: pointer; padding: 6px; }
+    .answer { display: none; margin-top: 5px; padding-left: 10px; }
+    .question:hover { color: blue; }
+    input { margin-top: 10px; padding: 6px; width: 60%; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FAQ</h1>
+  </header>
+
+  <main>
+    <section id="faq-list">
+
+      <article class="faq-item">
+        <p class="question">What is Machine Learning?</p>
+        <div class="answer">
+          <p>ML is teaching computers to learn from data.</p>
+          <input type="text" placeholder="Your thoughts?">
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <p class="question">What is an Algorithm?</p>
+        <div class="answer">
+          <p>A set of rules to solve a problem.</p>
+          <input type="text" placeholder="Your thoughts?">
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <p class="question">What is a Dataset?</p>
+        <div class="answer">
+          <p>A collection of data for training models.</p>
+          <input type="text" placeholder="Your thoughts?">
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <p class="question">What is Deep Learning?</p>
+        <div class="answer">
+          <p>A subset of ML using neural networks.</p>
+          <input type="text" placeholder="Your thoughts?">
+        </div>
+      </article>
+
+      <article class="faq-item">
+        <p class="question">What is Overfitting?</p>
+        <div class="answer">
+          <p>When a model memorizes data instead of learning patterns.</p>
+          <input type="text" placeholder="Your thoughts?">
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <script src="faq.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Welcome Greeting</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    header { margin-bottom: 20px; }
+    #greeting { font-size: 1.8rem; cursor: pointer; }
+    #quote { display: none; margin-top: 10px; color: #155724; }
+    #box { background: #eef6ff; padding: 12px; border-radius: 6px; width: fit-content; }
+    button { margin-right: 10px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome Page</h1>
+  </header>
+
+  <main>
+    <section id="box">
+      <h2 id="greeting"></h2>
+      <p id="time"></p>
+      <p id="quote">You are capable of amazing things.</p>
+    </section>
+
+    <nav>
+      <button id="change">Change Greeting</button>
+      <button id="toggle">Toggle Message</button>
+      <button id="reset">Reset</button>
+    </nav>
+
+    <aside>
+      <ul>
+        <li>Time-based greeting</li>
+        <li>Motivational quote</li>
+        <li>Visibility toggle</li>
+        <li>Reset option</li>
+        <li>Alert on click</li>
+      </ul>
+    </aside>
+  </main>
+
+  <script src="greetings.js"></script>
+</body>
+</html>

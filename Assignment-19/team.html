@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Team Directory</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    header { margin-bottom: 20px; }
+    .department { padding: 12px; background: #eef6ff; border-radius: 6px; margin-bottom: 18px; cursor: pointer; }
+    .manager { font-weight: bold; margin-bottom: 6px; cursor: pointer; }
+    .employee { padding: 5px 0; cursor: pointer; }
+    .contact { display: none; font-size: 0.9rem; color: #444; }
+    .highlight { background: #fff4c2; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Team Members Directory</h1>
+  </header>
+
+  <main>
+
+    <section class="department" data-dept="dev">
+      <p class="manager">Rahul (Manager - Dev)</p>
+      <div class="employee">Ayan</div>
+      <div class="contact">ayan@example.com</div>
+      <div class="employee">Neha</div>
+      <div class="contact">neha@example.com</div>
+      <div class="employee">Kabir</div>
+      <div class="contact">kabir@example.com</div>
+    </section>
+
+    <section class="department" data-dept="design">
+      <p class="manager">Sanya (Manager - Design)</p>
+      <div class="employee">Arjun</div>
+      <div class="contact">arjun@example.com</div>
+      <div class="employee">Riya</div>
+      <div class="contact">riya@example.com</div>
+      <div class="employee">Kriti</div>
+      <div class="contact">kriti@example.com</div>
+    </section>
+
+    <section class="department" data-dept="marketing">
+      <p class="manager">Vishal (Manager - Marketing)</p>
+      <div class="employee">Tanvi</div>
+      <div class="contact">tanvi@example.com</div>
+      <div class="employee">Mihir</div>
+      <div class="contact">mihir@example.com</div>
+      <div class="employee">Devika</div>
+      <div class="contact">devika@example.com</div>
+    </section>
+
+    <button id="random">Highlight Siblings of Random Employee</button>
+    <button id="toggle-team">Collapse / Expand All</button>
+
+  </main>
+
+  <script src="team.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Event Subscription Panel</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    header { margin-bottom: 16px; }
+    .panel { max-width: 700px; }
+    .topic-list { list-style: none; padding: 0; margin: 0 0 12px 0; display: grid; gap:8px; }
+    .topic { padding:10px; border:1px solid #ccc; border-radius:6px; display:flex; justify-content:space-between; align-items:center; }
+    .topic.subscribed { background:#e6ffed; border-color:#8bd18b; }
+    .controls { margin-bottom:12px; }
+    .message { margin-top:12px; padding:10px; border-radius:6px; display:none; }
+    .message.success { background:#e8f7ea; border:1px solid #7bd08a; }
+    button { margin-left:6px; }
+    input[type="text"] { padding:8px; width:260px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Subscription Panel</h1>
+  </header>
+
+  <main class="panel">
+    <section aria-labelledby="subs-title">
+      <h2 id="subs-title">Available Topics</h2>
+      <ul class="topic-list" id="topicList">
+        <li class="topic" data-topic="AI">
+          <span class="label">AI & ML</span>
+          <div>
+            <button class="subscribe">Subscribe</button>
+            <button class="unsubscribe">Unsubscribe</button>
+            <button class="remove">Remove</button>
+          </div>
+        </li>
+        <li class="topic" data-topic="Web">
+          <span class="label">Web Development</span>
+          <div>
+            <button class="subscribe">Subscribe</button>
+            <button class="unsubscribe">Unsubscribe</button>
+            <button class="remove">Remove</button>
+          </div>
+        </li>
+        <li class="topic" data-topic="Cloud">
+          <span class="label">Cloud & DevOps</span>
+          <div>
+            <button class="subscribe">Subscribe</button>
+            <button class="unsubscribe">Unsubscribe</button>
+            <button class="remove">Remove</button>
+          </div>
+        </li>
+        <li class="topic" data-topic="Security">
+          <span class="label">Security</span>
+          <div>
+            <button class="subscribe">Subscribe</button>
+            <button class="unsubscribe">Unsubscribe</button>
+            <button class="remove">Remove</button>
+          </div>
+        </li>
+        <li class="topic" data-topic="Data">
+          <span class="label">Data Engineering</span>
+          <div>
+            <button class="subscribe">Subscribe</button>
+            <button class="unsubscribe">Unsubscribe</button>
+            <button class="remove">Remove</button>
+          </div>
+        </li>
+      </ul>
+
+      <div class="controls">
+        <input type="text" id="newTopic" placeholder="New topic name">
+        <button id="addTopic">Add Topic</button>
+        <button id="detachSubscribe">Detach Subscribe Handler</button>
+      </div>
+
+      <div class="message success" id="msgBox"></div>
+    </section>
+  </main>
+
+  <script src="subscription.js"></script>
+</body>
+</html>

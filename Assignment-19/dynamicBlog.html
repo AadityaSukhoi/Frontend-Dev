@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Blog Manager</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            background: #f3f5f8;
+            padding: 40px;
+        }
+
+        header h1 {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        #controls {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        }
+        
+        button {
+            padding: 10px 15px;
+            margin: 6px;
+            border: none;
+            border-radius: 6px;
+            background: #4a7dff;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        
+        button:hover {
+            background: #335fd4;
+        }
+        
+        input {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            border: 2px solid #ccc;
+        }
+
+        #blogList {
+            max-width: 800px;
+            margin: 25px auto;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .post {
+            background: white;
+            margin: 12px 0;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #ffe07d;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+        
+        .highlight {
+            background: yellow;
+        }
+        </style>
+</head>
+
+<body>
+    
+    <header>
+        <h1>Dynamic Blog Admin Panel</h1>
+    </header>
+    
+    <section id="controls">
+        <input type="text" id="newPostText" placeholder="Write a new blog post...">
+        <input type="text" id="tagText" placeholder="Tag for new posts... (optional)">
+        <input type="text" id="keywordSearch" placeholder="Highlight posts containing keyword...">
+
+        <button id="addPost">Add New Post</button>
+        <button id="prependPost">Prepend Featured Post</button>
+        <button id="removeLast">Remove Last Post</button>
+    </section>
+    
+    <ul id="blogList">
+        <li class="post">The Future of AI in Everyday Life</li>
+        <li class="post">Top 10 Machine Learning Trends</li>
+        <li class="post">Understanding Neural Networks for Beginners</li>
+        <li class="post">Why Web Development Still Matters</li>
+        <li class="post">How Data Analytics Drives Innovation</li>
+    </ul>
+    
+</body>
+<script src="dynamicBlog.js" defer></script>
+</html>

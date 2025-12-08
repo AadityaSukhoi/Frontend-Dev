@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Courses</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            padding: 40px;
+            line-height: 1.6;
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        main {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        label {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        #searchBox {
+            width: 100%;
+            padding: 12px 14px;
+            margin: 10px 0 15px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.25s ease;
+        }
+
+        #searchBox:focus {
+            border-color: #4a7dff;
+            box-shadow: 0 0 5px rgba(74,125,255,0.4);
+        }
+
+        #count {
+            font-weight: bold;
+            color: #4a7dff;
+        }
+
+        #courseList {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        #courseList li {
+            padding: 12px;
+            font-size: 1.05rem;
+            background: #fafafa;
+            border: 1px solid #e4e4e4;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: 0.25s ease;
+        }
+
+        #courseList li:hover {
+            background: #f0f4ff;
+            border-color: #b7c7ff;
+        }
+        
+        .highlight {
+            background: #ffeb3b;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Online Course Library</h1>
+    </header>
+    
+    <main>
+        <section>
+            <label for="searchBox">Search Courses:</label>
+            <input type="text" id="searchBox" placeholder="Type to filter courses...">
+            <p>Matched Courses: <span id="count">0</span></p>
+        </section>
+
+        <section>
+            <ul id="courseList">
+                <li>Introduction to Artificial Intelligence</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Machine Learning with Python</li>
+                <li>Web Development Fundamentals</li>
+                <li>Database Management Systems</li>
+                <li>Deep Learning Essentials</li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+<script src="searchCourses.js" defer></script>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Special Offers</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    header { margin-bottom: 20px; }
+    .banner { padding: 20px; background: #ffe8b3; border-radius: 6px; margin-bottom: 12px; font-size: 1.1rem; display: none; }
+    .controls button { margin-right: 10px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Special Offer Banners</h1>
+  </header>
+
+  <main>
+
+    <section class="banner-list">
+      <div class="banner" id="b1">50% Off on All Items</div>
+      <div class="banner" id="b2">Buy 1 Get 1 Free</div>
+      <div class="banner" id="b3">New Arrivals Today</div>
+      <div class="banner" id="b4">Limited Time Flash Sale</div>
+      <div class="banner" id="b5">Special Discount for Students</div>
+    </section>
+
+    <nav class="controls">
+      <button id="hide">Hide Banners</button>
+      <button id="show">Show Banners</button>
+      <button id="slide">Slide Toggle</button>
+      <button id="fade">Fade Toggle</button>
+    </nav>
+
+  </main>
+
+  <script src="offers.js"></script>
+</body>
+</html>

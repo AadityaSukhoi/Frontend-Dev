@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Products Showcase</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    header { margin-bottom: 20px; }
+    .product-list { display: flex; gap: 20px; flex-wrap: wrap; }
+    .product { width: 180px; padding: 12px; border: 1px solid #bbb; border-radius: 6px; position: relative; cursor: pointer; }
+    .product.highlight { background: #fff4c2; }
+    .extra { display: none; margin-top: 8px; font-size: 0.9rem; }
+    .fav { position: absolute; top: 8px; right: 10px; cursor: pointer; font-size: 1.2rem; }
+    .fav.selected { color: red; }
+    .product[data-discount="true"] { border-color: green; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Product Highlight</h1>
+  </header>
+
+  <main>
+    <section class="product-list">
+      <article class="product" data-stock="in" data-discount="true">
+        <span class="fav">★</span>
+        <h3>Product A</h3>
+        <p>$19</p>
+        <p class="extra">Extra details about Product A.</p>
+      </article>
+
+      <article class="product" data-stock="out" data-discount="false">
+        <span class="fav">★</span>
+        <h3>Product B</h3>
+        <p>$29</p>
+        <p class="extra">Extra details about Product B.</p>
+      </article>
+
+      <article class="product" data-stock="in" data-discount="true">
+        <span class="fav">★</span>
+        <h3>Product C</h3>
+        <p>$15</p>
+        <p class="extra">Extra details about Product C.</p>
+      </article>
+
+      <article class="product" data-stock="in" data-discount="false">
+        <span class="fav">★</span>
+        <h3>Product D</h3>
+        <p>$11</p>
+        <p class="extra">Extra details about Product D.</p>
+      </article>
+
+      <article class="product" data-stock="out" data-discount="true">
+        <span class="fav">★</span>
+        <h3>Product E</h3>
+        <p>$39</p>
+        <p class="extra">Extra details about Product E.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="products.js"></script>
+</body>
+</html>
